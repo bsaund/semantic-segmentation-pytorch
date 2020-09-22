@@ -20,11 +20,12 @@ from mit_semseg.config import cfg
 
 colors = loadmat('data/color150.mat')['colors']
 names = {}
-with open('data/object150_info.csv') as f:
-    reader = csv.reader(f)
-    next(reader)
-    for row in reader:
-        names[int(row[0])] = row[5].split(";")[0]
+# with open('data/object150_info.csv') as f:
+#     reader = csv.reader(f)
+#     next(reader)
+#     for row in reader:
+#         names[int(row[0])] = row[5].split(";")[0]
+
 
 
 def visualize_result(data, pred, cfg):
@@ -36,7 +37,8 @@ def visualize_result(data, pred, cfg):
     uniques, counts = np.unique(pred, return_counts=True)
     print("Predictions in [{}]:".format(info))
     for idx in np.argsort(counts)[::-1]:
-        name = names[uniques[idx] + 1]
+        # name = names[uniques[idx] + 1]
+        name = str(uniques[idx])
         ratio = counts[idx] / pixs * 100
         if ratio > 0.1:
             print("  {}: {:.2f}%".format(name, ratio))

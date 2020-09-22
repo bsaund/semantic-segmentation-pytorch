@@ -181,7 +181,9 @@ def main(cfg, gpus):
     iterator_train = iter(loader_train)
 
     # load nets into gpu
-    if len(gpus) > 1:
+    print(gpus)
+    # if len(gpus) > 1:
+    if True:
         segmentation_module = UserScatteredDataParallel(
             segmentation_module,
             device_ids=gpus)

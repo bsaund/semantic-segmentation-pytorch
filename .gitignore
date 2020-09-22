@@ -4,6 +4,7 @@ ckpt/
 vis/
 log/
 pretrained/
+data/
 
 .ipynb_checkpoints
 
