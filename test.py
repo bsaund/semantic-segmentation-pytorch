@@ -20,12 +20,13 @@ from mit_semseg.config import cfg
 
 colors = loadmat('data/color150.mat')['colors']
 names = {}
+
+
 # with open('data/object150_info.csv') as f:
 #     reader = csv.reader(f)
 #     next(reader)
 #     for row in reader:
 #         names[int(row[0])] = row[5].split(";")[0]
-
 
 
 def visualize_result(data, pred, cfg):
@@ -170,7 +171,7 @@ if __name__ == '__main__':
     cfg.merge_from_list(args.opts)
     # cfg.freeze()
 
-    logger = setup_logger(distributed_rank=0)   # TODO
+    logger = setup_logger(distributed_rank=0)  # TODO
     logger.info("Loaded configuration file {}".format(args.cfg))
     logger.info("Running with config:\n{}".format(cfg))
 
@@ -184,7 +185,7 @@ if __name__ == '__main__':
         cfg.DIR, 'decoder_' + cfg.TEST.checkpoint)
 
     assert os.path.exists(cfg.MODEL.weights_encoder) and \
-        os.path.exists(cfg.MODEL.weights_decoder), "checkpoint does not exitst!"
+           os.path.exists(cfg.MODEL.weights_decoder), "checkpoint does not exitst!"
 
     # generate testing image list
     if os.path.isdir(args.imgs):
