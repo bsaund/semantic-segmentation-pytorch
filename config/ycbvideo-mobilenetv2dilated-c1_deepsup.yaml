@@ -1,7 +1,7 @@
 DATASET:
   root_dataset: "./data/"
-  list_train: "./data/fat_training.odgt"
-  list_val: "./data/fat_validation.odgt"
+  list_train: "./data/YCB_Video_Dataset/ycb_video_training.odgt"
+  list_val: "./data/YCB_Video_Dataset/ycb_video_validation.odgt"
   num_class: 22
   imgSizes: (300, 375, 450, 525, 600)
   imgMaxSize: 1000
@@ -39,4 +39,4 @@ TEST:
   checkpoint: "epoch_20.pth"
   result: "./"
 
-DIR: "ckpt/fat-mobilenetv2dilated-c1_deepsup"
+DIR: "ckpt/ycbvideo-mobilenetv2dilated-c1_deepsup"
