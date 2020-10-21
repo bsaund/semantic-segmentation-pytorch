@@ -4,7 +4,7 @@ This repo is [forked](https://github.com/CSAILVision/semantic-segmentation-pytor
 This readme contains instructions for retraining a model based on your data
 
 # Use this segmenter in ROS
-Check out [This Package](https://github.com/bsaund/object_segmentation) for a wrapper for using this segmenter is ROS
+Check out [This Package](https://github.com/bsaund/object_segmentation) for a wrapper to use this segmenter in ROS
 
 # Train from the YCB Video Dataset
 I retrained on the [YCB Video dataset](https://github.com/yuxng/YCB_Video_toolbox).
