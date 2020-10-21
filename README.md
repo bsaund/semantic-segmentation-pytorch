@@ -13,7 +13,7 @@ I retrained on the [YCB Video dataset](https://github.com/yuxng/YCB_Video_toolbo
 5. `python train.py --cfg [your config file] --gpus [your gpu(s)]`
 
 ### Add your custom images
-To tailor the segmenter to your custom environment, I suggest:
+To tailor the segmenter to your custom environment, I suggest, but have not tried:
 
 1. Take pictures of your scene WITHOUT any ycb objects
 2. Overlay the YCB objects from the `data_syn` portion of the YCB_Video_Dataset. These are YCB objects on a transparent background.
